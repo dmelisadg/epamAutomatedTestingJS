@@ -1,10 +1,13 @@
 {
   "name": "introautomatedtestingjs",
+  "type": "module",
   "version": "1.0.0",
   "description": "Homeworks",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'test/**/*.spec.js'",
+    "coverage": "c8 npm test",
+    "lint": "eslint ./ --fix"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/dmelisadg/introAutomatedTestingJS/issues"
   },
-  "homepage": "https://github.com/dmelisadg/introAutomatedTestingJS#readme"
+  "homepage": "https://github.com/dmelisadg/introAutomatedTestingJS#readme",
+  "dependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "mochawesome": "^7.1.3"
+  }
 }
