@@ -5,7 +5,7 @@
   "description": "Homeworks",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'test/**/*.spec.js'",
+    "test": "mocha 'test/**/*.spec.js' --reporter mochawesome",
     "coverage": "c8 npm test",
     "lint": "eslint ./ --fix"
   },
@@ -29,6 +29,7 @@
     "eslint": "^8.50.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.28.1",
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
