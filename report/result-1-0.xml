@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test suite Homework 3" timestamp="2023-10-31T09:07:31" time="25.197" tests="2" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Test suite - Homework 3"/>
+      <property name="capabilities" value="firefox.112_0_1.windows"/>
+      <property name="file" value="file:///C:/Users/dmeli/Desktop/EPAM_IntroAutomatedTestingJS/introAutomatedTestingJS/test/specs/test.e2e.js"/>
+    </properties>
+    <testcase classname="firefox.112_0_1.windows.Test_suite_-_Homework_3" name="Fifth Test" time="24.412">
+      <system-out><![CDATA[
+COMMAND: POST /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3/url - {"url":"https://www.fisicalab.com/tema/optica-geometrica"}
+RESULT: {"url":"https://www.fisicalab.com/tema/optica-geometrica"}
+COMMAND: POST /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3/cookie - {"cookie":{"name":"test1","value":"Galletita Uno!"}}
+RESULT: {"cookie":{"name":"test1","value":"Galletita Uno!"}}
+COMMAND: GET /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3/cookie - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.112_0_1.windows.Test_suite_-_Homework_3" name="Fifth Test" time="0.78">
+      <failure/>
+      <error message="expect(received).toEqual(expected) // deep equality&#xA;&#xA;Expected: &quot;localStorageValue2&quot;&#xA;Received: &quot;localStorageValue&quot;"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3/execute/sync - {"script":"return (function (key, value) {\r\n            window.localStorage.setItem(key, value);\r\n        }).apply(null, arguments)","args":["localStorageKey","localStorageValue"]}
+RESULT: {"script":"return (function (key, value) {\r\n            window.localStorage.setItem(key, value);\r\n        }).apply(null, arguments)","args":["localStorageKey","localStorageValue"]}
+COMMAND: POST /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3/execute/sync - {"script":"return (function (key) {\r\n            return window.localStorage.getItem(key);\r\n        }).apply(null, arguments)","args":["localStorageKey"]}
+RESULT: {"script":"return (function (key) {\r\n            return window.localStorage.getItem(key);\r\n        }).apply(null, arguments)","args":["localStorageKey"]}
+COMMAND: GET /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/b3467e84-62db-4288-8c79-feb3dc5d1fa3 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: expect(received).toEqual(expected) // deep equality
+
+Expected: "localStorageValue2"
+Received: "localStorageValue"
+    at Context.<anonymous> (C:\Users\dmeli\Desktop\EPAM_IntroAutomatedTestingJS\introAutomatedTestingJS\test\specs\test.e2e.js:168:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>

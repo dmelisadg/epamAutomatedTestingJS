@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Nov 10 08:49:03 COT 2023","Fri Nov 10 08:49:05 COT 2023","1926","","Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors","","","","First test - WebPage is working right",""
+"passed","Fri Nov 10 08:49:06 COT 2023","Fri Nov 10 08:49:09 COT 2023","2371","","Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors","","","","Third test - ID CSS Selector and XPath",""
+"passed","Fri Nov 10 08:49:10 COT 2023","Fri Nov 10 08:49:12 COT 2023","2373","","Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors","","","","Fifth test - ID CSS Selector and XPath click button and open link",""
+"passed","Fri Nov 10 08:49:09 COT 2023","Fri Nov 10 08:49:10 COT 2023","1220","","Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors","","","","Fourth test - ID CSS Selector display menu",""
+"passed","Fri Nov 10 08:49:05 COT 2023","Fri Nov 10 08:49:06 COT 2023","1229","","Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors","","","","Second test - ID CSS Selector",""
+"passed","Fri Nov 10 08:49:10 COT 2023","Fri Nov 10 08:49:11 COT 2023","797","","Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors","","","","""before each"" hook for Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors",""
