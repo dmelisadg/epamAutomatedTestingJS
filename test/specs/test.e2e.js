@@ -100,51 +100,51 @@ const { describe, it } = require('mocha')
 // })
 
 describe("Test suite - Homework 3", () => {
-    // it("First test - Using Execute command ", async () => {
-    //     await browser.url('https://www.wolfram.com/mathematica/');
-    //     await $('#_nav-search').$('._nav-l1').$('._icon-r1-c3.hide__600').click();
-    //     const input = await $('#_nav-search').$('.no-bfc').$('#_search-input');
-    //     await browser.execute(
-    //         function (input) {
-    //             input.value = 'eigenvalue';
-    //             return input
-    //         }, input);
-    //     await input.addValue('\uE007');
-    //     // Getting first result and comparing no matter upper or lower case
-    //     const resultsContainer = await $('#main').$('.column_box');
-    //     const firstResult = await resultsContainer.$('.search_result_title');
-    //     const textOriginal = await firstResult.getText();
-    //     const lowerCaseText = textOriginal.toLowerCase();
-    //     expect(await lowerCaseText.includes('eigenvalue')).toEqual(true);
-    // });
+    it("First test - Using Execute command ", async () => {
+        await browser.url('https://www.wolfram.com/mathematica/');
+        await $('#_nav-search').$('._nav-l1').$('._icon-r1-c3.hide__600').click();
+        const input = await $('#_nav-search').$('.no-bfc').$('#_search-input');
+        await browser.execute(
+            function (input) {
+                input.value = 'eigenvalue';
+                return input
+            }, input);
+        await input.addValue('\uE007');
+        // Getting first result and comparing no matter upper or lower case
+        const resultsContainer = await $('#main').$('.column_box');
+        const firstResult = await resultsContainer.$('.search_result_title');
+        const textOriginal = await firstResult.getText();
+        const lowerCaseText = textOriginal.toLowerCase();
+        expect(await lowerCaseText.includes('eigenvalue')).toEqual(true);
+    });
 
-    // it("Second Test - Using wait until to verify a displaying element", async () => {
-    //     await browser.url('https://www.youtube.com/');
-    //     await $("#guide-button").click();
-    //     const menu = await browser.waitUntil(
-    //         async () => await $(".style-scope.tp-yt-app-drawer.visible").isDisplayed(),
-    //         {timeout: 5000, interval: 600, timeoutMsg: "not loaded"}
-    //     );
-    //     expect(await menu).toEqual(true, "Side menu is not displayed")
-    // });
+    it("Second Test - Using wait until to verify a displaying element", async () => {
+        await browser.url('https://www.youtube.com/');
+        await $("#guide-button").click();
+        const menu = await browser.waitUntil(
+            async () => await $(".style-scope.tp-yt-app-drawer.visible").isDisplayed(),
+            {timeout: 5000, interval: 600, timeoutMsg: "not loaded"}
+        );
+        expect(await menu).toEqual(true, "Side menu is not displayed")
+    });
 
-    // it("Third Test - Webpage counts double click on canvas", async () => {
-    //     await browser.url('https://mousetester.com/');
-    //     const clicks = await $('#clickMe');
-    //     await clicks.doubleClick();
-    //     const counter = await $('#button_0_double')
-    //     const clicksCounter = await counter.getText();
-    //     expect(parseInt(clicksCounter)).toEqual(1, 'the double click is not executed');
+    it("Third Test - Webpage counts double click on canvas", async () => {
+        await browser.url('https://mousetester.com/');
+        const clicks = await $('#clickMe');
+        await clicks.doubleClick();
+        const counter = await $('#button_0_double')
+        const clicksCounter = await counter.getText();
+        expect(parseInt(clicksCounter)).toEqual(1, 'the double click is not executed');
 
-    // });
+    });
 
-    // it('Fourth Test - Drag and drop and specific element', async () => {
-    //     await browser.url('https://www.e-education.psu.edu/geog777/h5p/embed/1950');
-    //     const elem = await $('.h5p-hidden-read');
-    //     const target = await $('.h5p-inner.ui-droppable');
-    //     await elem.dragAndDrop(target);const droppedText = await $('.h5p-draggable.ui-draggable.ui-draggable-handle.h5p-advanced-text.h5p-dropped');
-    //     expect(await droppedText.isExisting()).toEqual(true);
-    // })
+    it('Fourth Test - Drag and drop and specific element', async () => {
+        await browser.url('https://www.e-education.psu.edu/geog777/h5p/embed/1950');
+        const elem = await $('.h5p-hidden-read');
+        const target = await $('.h5p-inner.ui-droppable');
+        await elem.dragAndDrop(target);const droppedText = await $('.h5p-draggable.ui-draggable.ui-draggable-handle.h5p-advanced-text.h5p-dropped');
+        expect(await droppedText.isExisting()).toEqual(true);
+    })
 
     it('Fifth Test - Setting and getting cookies on webPage', async () => {
         await browser.url('https://www.fisicalab.com/tema/optica-geometrica');
