@@ -15,90 +15,89 @@ const { describe, it } = require('mocha')
 //     })
 // })
 
-describe("Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors", ()=>{
-    beforeEach(async ()=>{
-        await browser.url("https://www.python.org/");
-    })
-    it("First test - WebPage is working right", async ()=>{
-        const pageTitle = await browser.getTitle();
-        expect(pageTitle).toEqual("Welcome to Python.org")
-    });
-    it("Second test - ID CSS Selector", async ()=>{
-        const aText = await $("[id='news']");
-        expect(await aText.getText()).toEqual('News');
-    });
-    it("Third test - ID CSS Selector and XPath", async ()=>{
-        await $('[id="events"]').click()
-        const aLink = await $('/html/body/div/header/div/nav/ul/li[7]/a');
-        expect(await aLink.getAttribute('href')).toHaveHref('http://lmorillas.github.io/python_events/');
-    });
-
-    it("Fourth test - ID CSS Selector display menu", async ()=>{
-        const element = await $('[id="success-stories"]')
-        const dispElement = await element.isDisplayed();
-        expect(await dispElement).toEqual(true);
-    })
- 
-    it("Fifth test - ID CSS Selector and XPath click button and open link", async ()=>{
-        await $('[id="events"]').click()
-        const aLink = await $('/html/body/div/div[3]/div/aside/div/p[1]/a');
-        expect(await aLink.getAttribute('href')).toHaveHref('http://lmorillas.github.io/python_events/');
-    });
- })
-
-//describe("Test suite - Homework 2", ()=>{
-
-// it("First test", async ()=>{
-//     await browser.url("https://www.wolfram.com/mathematica/");
-//     const headerID = await $('#_header');
-//     //console.log(await headerID.isExisting())
-//     expect(await headerID.isExisting()).toEqual(true);
-// });
-
-// it("Second test", async ()=>{
-//     await browser.url("https://www.wolfram.com/mathematica/")
-//     await $('#_logo').click({
-//         button: 0,
-//         x:100
+// describe("Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors", ()=>{
+//     beforeEach(async ()=>{
+//         await browser.url("https://www.python.org/");
+//     })
+//     it("First test - WebPage is working right", async ()=>{
+//         const pageTitle = await browser.getTitle();
+//         expect(pageTitle).toEqual("Welcome to Python.org")
 //     });
-//     await browser.pause(10000);
-//     const headerID = await $('/html/head')
-//     expect(await headerID.getTitle()).toEqual('Wolfram: La unión entre la computación y el conocimiento');
-// });
+//     it("Second test - ID CSS Selector", async ()=>{
+//         const aText = await $("[id='news']");
+//         expect(await aText.getText()).toEqual('News');
+//     });
+//     it("Third test - ID CSS Selector and XPath", async ()=>{
+//         await $('[id="events"]').click()
+//         const aLink = await $('/html/body/div/header/div/nav/ul/li[7]/a');
+//         expect(await aLink.getAttribute('href')).toHaveHref('http://lmorillas.github.io/python_events/');
+//     });
 
-// it("Third test", async ()=>{
-//     await browser.url("https://www.wolfram.com/mathematica/")
-//     const iconSearch = await $('/html/body/header[1]/div[2]/nav/div[6]/a/i[2]').click();
-//     await browser.pause(1000);
-//     const valueSearch = await $('/html/body/header[1]/div[2]/nav/div[6]/ul/li/form/div/input');
-//     await valueSearch.setValue('orthogonal')
-//     await browser.pause(4000);
-// });
+//     it("Fourth test - ID CSS Selector display menu", async ()=>{
+//         const element = await $('[id="success-stories"]')
+//         const dispElement = await element.isDisplayed();
+//         expect(await dispElement).toEqual(true);
+//     })
+ 
+//     it("Fifth test - ID CSS Selector and XPath click button and open link", async ()=>{
+//         await $('[id="events"]').click()
+//         const aLink = await $('/html/body/div/div[3]/div/aside/div/p[1]/a');
+//         expect(await aLink.getAttribute('href')).toHaveHref('http://lmorillas.github.io/python_events/');
+//     });
+//  })
 
-// it("Fourth test", async ()=>{
-//     await browser.url("https://www.wolfram.com/mathematica/")
+describe("Test suite - Homework 2", ()=>{
+
+beforeEach(async ()=>{
+    await browser.url("https://www.wolfram.com/mathematica/");
+});
+
+it("First test - Using command isExisting() to check the Header", async ()=>{
+    const headerID = await $('#_header');
+    expect(await headerID.isExisting()).toEqual(true);
+});
+
+it("Second test - Testing more options for click command and verifiying webpage title", async ()=>{
+    await $('#_logo').click({
+        button: 0,
+        x:100
+    });
+    await browser.pause(10000)
+    const headerID = await $('head')
+    expect(await headerID.getTitle()).toEqual('Wolfram: La unión entre la computación y el conocimiento');
+});
+
+it("Third test - Search a value, display results and verifiying first results contains search word", async ()=>{
+    // Click to the search bar
+    await $('#_nav-search').$('._nav-l1').$('._icon-r1-c3.hide__600').click();
+    const valueSearch = await $('#_nav-search').$('.no-bfc').$('#_search-input');
+    // Setting value
+    await valueSearch.setValue('orthogonal');
+    await valueSearch.addValue('\uE007');
+    // Getting first result and comparing no matter upper or lower case
+    const resultsContainer = await $('#main').$('.column_box');
+    const firstResult = await resultsContainer.$('.search_result_title');
+    const textOriginal = await firstResult.getText();
+    const lowerCaseText = textOriginal.toLowerCase();
+    expect(await lowerCaseText.includes('orthogonal')).toEqual(true);
+});
+
+// it("Fourth test - Using IsExisting() again", async ()=>{
 //     const productIcon = await $('/html/body/header[1]/div[2]/nav/div[1]')
-//     // console.log(await productIcon);
-//     // await browser.pause(4000);
 //     expect(await productIcon.isExisting()).toEqual(true);
 // });
 
-// it("Fifth test", async ()=>{
-//     await browser.url("https://www.wolfram.com/mathematica/")
-//     const navProd = await $('/html/body/header[1]/div[2]/nav')
-//     const divProd = await navProd.$$('div')[1].$('a').isClickable()
-//    // console.log(await divProd.isClickable());
-//     expect(divProd).toEqual(false);
-// });
+it("Fifth test - Verifying that Logo page is a clickable element", async ()=>{
+    const navProd = await $('#_header-b').$('.cf.display-b');
+    const divProd = await navProd.isClickable();
+    expect(divProd).toEqual(true);
+});
 
-
-// it("Sixth test", async ()=>{
-//     await browser.url("https://www.wolfram.com/mathematica/")
+// it("Sixth test - Header has ID property", async ()=>{
 //     const headerID = await $('/html/body/header[1]/div[1]');
-//     //console.log(await headerID)
 //     expect(await headerID.getProperty('id')).toEqual('_header-t');
 // });
-//})
+})
 
 // describe("Test suite - Homework 3", () => {
 //     // it("First test", async () => {

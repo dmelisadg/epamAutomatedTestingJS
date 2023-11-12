@@ -1,67 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Homework 1 Testing at least 4 scenarios trying to use both XPath and CSS selectors" timestamp="2023-11-10T08:49:03" time="9.145" tests="5" failures="0" errors="0" skipped="0">
+  <testsuite name="Test suite Homework 2" timestamp="2023-11-12T12:20:20" time="7.924" tests="1" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Homework 1 - Testing at least 4 scenarios trying to use both XPath and CSS selectors"/>
+      <property name="suiteName" value="Test suite - Homework 2"/>
       <property name="capabilities" value="chrome.119_0_6045_124.windows"/>
       <property name="file" value="file:///C:/Users/dmeli/Desktop/EPAM_IntroAutomatedTestingJS/introAutomatedTestingJS/test/specs/test.e2e.js"/>
     </properties>
-    <testcase classname="chrome.119_0_6045_124.windows.Homework_1_-_Testing_at_least_4_scenarios_trying_to_use_both_XPath_and_CSS_selectors" name="First test WebPage is working right" time="1.929">
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_2" name="Third test Search a value and display results" time="7.916">
       <system-out><![CDATA[
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/url - {"url":"https://www.python.org/"}
-RESULT: {"url":"https://www.python.org/"}
-COMMAND: GET /session/ef6269a1b156c468e1ee44396756bbdb/title - {}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/url - {"url":"https://www.wolfram.com/mathematica/"}
+RESULT: {"url":"https://www.wolfram.com/mathematica/"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element - {"using":"css selector","value":"#_nav-search"}
+RESULT: {"using":"css selector","value":"#_nav-search"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_23/element - {"using":"css selector","value":"._nav-l1"}
+RESULT: {"using":"css selector","value":"._nav-l1"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_24/element - {"using":"css selector","value":"._icon-r1-c3.hide__600"}
+RESULT: {"using":"css selector","value":"._icon-r1-c3.hide__600"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_25/click - {}
 RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.119_0_6045_124.windows.Homework_1_-_Testing_at_least_4_scenarios_trying_to_use_both_XPath_and_CSS_selectors" name="Second test ID CSS Selector" time="1.229">
-      <system-out><![CDATA[
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/url - {"url":"https://www.python.org/"}
-RESULT: {"url":"https://www.python.org/"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element - {"using":"css selector","value":"[id='news']"}
-RESULT: {"using":"css selector","value":"[id='news']"}
-COMMAND: GET /session/ef6269a1b156c468e1ee44396756bbdb/element/7DBDAC05E8CD7E56D5F48A90C9998D0E_element_12/text - {}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element - {"using":"css selector","value":"#_nav-search"}
+RESULT: {"using":"css selector","value":"#_nav-search"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_23/element - {"using":"css selector","value":".no-bfc"}
+RESULT: {"using":"css selector","value":".no-bfc"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_27/element - {"using":"css selector","value":"#_search-input"}
+RESULT: {"using":"css selector","value":"#_search-input"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_26/clear - {}
 RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.119_0_6045_124.windows.Homework_1_-_Testing_at_least_4_scenarios_trying_to_use_both_XPath_and_CSS_selectors" name="Third test ID CSS Selector and XPath" time="2.371">
-      <system-out><![CDATA[
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/url - {"url":"https://www.python.org/"}
-RESULT: {"url":"https://www.python.org/"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element - {"using":"css selector","value":"[id=\"events\"]"}
-RESULT: {"using":"css selector","value":"[id=\"events\"]"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element/2471CBF019EE9527DDA0140AD41453D9_element_20/click - {}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_26/value - {"text":"orthogonal"}
+RESULT: {"text":"orthogonal"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_26/value - {"text":""}
+RESULT: {"text":""}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element - {"using":"css selector","value":"#main"}
+RESULT: {"using":"css selector","value":"#main"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_47/element - {"using":"css selector","value":".column_box"}
+RESULT: {"using":"css selector","value":".column_box"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/element - {"using":"css selector","value":".search_result_title"}
+RESULT: {"using":"css selector","value":".search_result_title"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/elements - {"using":"css selector","value":".search_result_title"}
+RESULT: {"using":"css selector","value":".search_result_title"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/elements - {"using":"css selector","value":".search_result_title"}
+RESULT: {"using":"css selector","value":".search_result_title"}
+COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/element - {"using":"css selector","value":".search_result_title"}
+RESULT: {"using":"css selector","value":".search_result_title"}
+COMMAND: GET /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_50/text - {}
 RESULT: {}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element - {"using":"xpath","value":"/html/body/div/header/div/nav/ul/li[7]/a"}
-RESULT: {"using":"xpath","value":"/html/body/div/header/div/nav/ul/li[7]/a"}
-COMMAND: GET /session/ef6269a1b156c468e1ee44396756bbdb/element/BC74551F08F57CD62E836626F4373FBF_element_27/attribute/href - {}
-RESULT: {}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.119_0_6045_124.windows.Homework_1_-_Testing_at_least_4_scenarios_trying_to_use_both_XPath_and_CSS_selectors" name="Fourth test ID CSS Selector display menu" time="1.22">
-      <system-out><![CDATA[
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/url - {"url":"https://www.python.org/"}
-RESULT: {"url":"https://www.python.org/"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element - {"using":"css selector","value":"[id=\"success-stories\"]"}
-RESULT: {"using":"css selector","value":"[id=\"success-stories\"]"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"B732D1D17973FAC3A4D41E1B0B1DF38E_element_35","ELEMENT":"B732D1D17973FAC3A4D41E1B0B1DF38E_element_35"}]}
-RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"B732D1D17973FAC3A4D41E1B0B1DF38E_element_35","ELEMENT":"B732D1D17973FAC3A4D41E1B0B1DF38E_element_35"}]}
-]]></system-out>
-    </testcase>
-    <testcase classname="chrome.119_0_6045_124.windows.Homework_1_-_Testing_at_least_4_scenarios_trying_to_use_both_XPath_and_CSS_selectors" name="Fifth test ID CSS Selector and XPath click button and open link" time="2.372">
-      <system-out><![CDATA[
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/url - {"url":"https://www.python.org/"}
-RESULT: {"url":"https://www.python.org/"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element - {"using":"css selector","value":"[id=\"events\"]"}
-RESULT: {"using":"css selector","value":"[id=\"events\"]"}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element/1A82C370019BE2E0D8B78C2E3B51CBEF_element_43/click - {}
-RESULT: {}
-COMMAND: POST /session/ef6269a1b156c468e1ee44396756bbdb/element - {"using":"xpath","value":"/html/body/div/div[3]/div/aside/div/p[1]/a"}
-RESULT: {"using":"xpath","value":"/html/body/div/div[3]/div/aside/div/p[1]/a"}
-COMMAND: GET /session/ef6269a1b156c468e1ee44396756bbdb/element/2E3AD6E8E2B0539A5AB91EEF5024B896_element_50/attribute/href - {}
-RESULT: {}
-COMMAND: DELETE /session/ef6269a1b156c468e1ee44396756bbdb - {}
+COMMAND: DELETE /session/9d3a44abb665a6e7b054a620355d20f8 - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
