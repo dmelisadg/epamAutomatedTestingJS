@@ -1,51 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Test suite Homework 2" timestamp="2023-11-12T12:20:20" time="7.924" tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="Test suite Homework 3" timestamp="2023-11-12T18:40:18" time="12.952" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Test suite - Homework 2"/>
+      <property name="suiteName" value="Test suite - Homework 3"/>
       <property name="capabilities" value="chrome.119_0_6045_124.windows"/>
       <property name="file" value="file:///C:/Users/dmeli/Desktop/EPAM_IntroAutomatedTestingJS/introAutomatedTestingJS/test/specs/test.e2e.js"/>
     </properties>
-    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_2" name="Third test Search a value and display results" time="7.916">
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_3" name="Fifth Test Setting and getting cookies on webPage" time="3.287">
       <system-out><![CDATA[
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/url - {"url":"https://www.wolfram.com/mathematica/"}
-RESULT: {"url":"https://www.wolfram.com/mathematica/"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element - {"using":"css selector","value":"#_nav-search"}
-RESULT: {"using":"css selector","value":"#_nav-search"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_23/element - {"using":"css selector","value":"._nav-l1"}
-RESULT: {"using":"css selector","value":"._nav-l1"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_24/element - {"using":"css selector","value":"._icon-r1-c3.hide__600"}
-RESULT: {"using":"css selector","value":"._icon-r1-c3.hide__600"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_25/click - {}
+COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/url - {"url":"https://www.fisicalab.com/tema/optica-geometrica"}
+RESULT: {"url":"https://www.fisicalab.com/tema/optica-geometrica"}
+COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/cookie - {"cookie":{"name":"test1","value":"Galletita Uno!"}}
+RESULT: {"cookie":{"name":"test1","value":"Galletita Uno!"}}
+COMMAND: GET /session/ab56d67e604f19ddd29be742163c220c/cookie - {}
 RESULT: {}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element - {"using":"css selector","value":"#_nav-search"}
-RESULT: {"using":"css selector","value":"#_nav-search"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_23/element - {"using":"css selector","value":".no-bfc"}
-RESULT: {"using":"css selector","value":".no-bfc"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_27/element - {"using":"css selector","value":"#_search-input"}
-RESULT: {"using":"css selector","value":"#_search-input"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_26/clear - {}
-RESULT: {}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_26/value - {"text":"orthogonal"}
-RESULT: {"text":"orthogonal"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/74C75AD084FC7002390A7DFBC42C0DFE_element_26/value - {"text":""}
-RESULT: {"text":""}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element - {"using":"css selector","value":"#main"}
-RESULT: {"using":"css selector","value":"#main"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_47/element - {"using":"css selector","value":".column_box"}
-RESULT: {"using":"css selector","value":".column_box"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/element - {"using":"css selector","value":".search_result_title"}
-RESULT: {"using":"css selector","value":".search_result_title"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/elements - {"using":"css selector","value":".search_result_title"}
-RESULT: {"using":"css selector","value":".search_result_title"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/elements - {"using":"css selector","value":".search_result_title"}
-RESULT: {"using":"css selector","value":".search_result_title"}
-COMMAND: POST /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_48/element - {"using":"css selector","value":".search_result_title"}
-RESULT: {"using":"css selector","value":".search_result_title"}
-COMMAND: GET /session/9d3a44abb665a6e7b054a620355d20f8/element/79109BCB94A238E4053066C49C47E467_element_50/text - {}
-RESULT: {}
-COMMAND: DELETE /session/9d3a44abb665a6e7b054a620355d20f8 - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_3" name="Sixth Test testing Local Storage" time="9.647">
+      <system-out><![CDATA[
+COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/execute/sync - {"script":"return (function (key, value) {\r\n            window.localStorage.setItem(key, value);\r\n        }).apply(null, arguments)","args":["myLocalStorage","Datos random que quiero guardar"]}
+RESULT: {"script":"return (function (key, value) {\r\n            window.localStorage.setItem(key, value);\r\n        }).apply(null, arguments)","args":["myLocalStorage","Datos random que quiero guardar"]}
+COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/execute/sync - {"script":"return (function (key) {\r\n            return window.localStorage.getItem(key);\r\n        }).apply(null, arguments)","args":["myLocalStorage"]}
+RESULT: {"script":"return (function (key) {\r\n            return window.localStorage.getItem(key);\r\n        }).apply(null, arguments)","args":["myLocalStorage"]}
+COMMAND: DELETE /session/ab56d67e604f19ddd29be742163c220c - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
