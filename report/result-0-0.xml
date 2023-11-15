@@ -1,29 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Test suite Homework 3" timestamp="2023-11-12T18:40:18" time="12.952" tests="2" failures="0" errors="0" skipped="0">
+  <testsuite name="Test suite Homework 2" timestamp="2023-11-15T10:05:16" time="21.325" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="Test suite - Homework 3"/>
+      <property name="suiteName" value="Test suite - Homework 2"/>
       <property name="capabilities" value="chrome.119_0_6045_124.windows"/>
-      <property name="file" value="file:///C:/Users/dmeli/Desktop/EPAM_IntroAutomatedTestingJS/introAutomatedTestingJS/test/specs/test.e2e.js"/>
+      <property name="file" value="file:///C:/Users/dmeli/Desktop/EPAM_IntroAutomatedTestingJS/introAutomatedTestingJS/src/test/specs/test.e2e.js"/>
     </properties>
-    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_3" name="Fifth Test Setting and getting cookies on webPage" time="3.287">
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_2" name="First test Using command isExisting to check the Header" time="3.208">
       <system-out><![CDATA[
-COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/url - {"url":"https://www.fisicalab.com/tema/optica-geometrica"}
-RESULT: {"url":"https://www.fisicalab.com/tema/optica-geometrica"}
-COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/cookie - {"cookie":{"name":"test1","value":"Galletita Uno!"}}
-RESULT: {"cookie":{"name":"test1","value":"Galletita Uno!"}}
-COMMAND: GET /session/ab56d67e604f19ddd29be742163c220c/cookie - {}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/url - {"url":"https://www.wolfram.com/mathematica/"}
+RESULT: {"url":"https://www.wolfram.com/mathematica/"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"#_header"}
+RESULT: {"using":"css selector","value":"#_header"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/elements - {"using":"css selector","value":"#_header"}
+RESULT: {"using":"css selector","value":"#_header"}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_2" name="Second test Testing more options for click command and verifiying webpage title" time="12.8">
+      <system-out><![CDATA[
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/url - {"url":"https://www.wolfram.com/mathematica/"}
+RESULT: {"url":"https://www.wolfram.com/mathematica/"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"#_logo"}
+RESULT: {"using":"css selector","value":"#_logo"}
+COMMAND: GET /session/eda0070c2137515158dc2016cca82c6e/element/747FD3CE2FBDF71DC85EBA16863FC432_element_53/rect - {}
+RESULT: {}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/actions - {"actions":[{"id":"action1","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"id":"action1","type":"pointer","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"5 more keys: [\"azimuthAngle\",\"x\",\"y\",\"duration\",\"origin\"]"},{"type":"pointerDown","button":0,"width":0,"height":0,"pressure":0,"tangentialPressure":0,"tiltX":0,"tiltY":0,"twist":0,"altitudeAngle":0,"_":"1 more keys: [\"azimuthAngle\"]"},{"type":"pointerUp","button":0}]}]}
+COMMAND: DELETE /session/eda0070c2137515158dc2016cca82c6e/actions - {}
+RESULT: {}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"head"}
+RESULT: {"using":"css selector","value":"head"}
+COMMAND: GET /session/eda0070c2137515158dc2016cca82c6e/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_3" name="Sixth Test testing Local Storage" time="9.647">
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_2" name="Third test Search a value display results and verifiying first results contains search word" time="4.171">
       <system-out><![CDATA[
-COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/execute/sync - {"script":"return (function (key, value) {\r\n            window.localStorage.setItem(key, value);\r\n        }).apply(null, arguments)","args":["myLocalStorage","Datos random que quiero guardar"]}
-RESULT: {"script":"return (function (key, value) {\r\n            window.localStorage.setItem(key, value);\r\n        }).apply(null, arguments)","args":["myLocalStorage","Datos random que quiero guardar"]}
-COMMAND: POST /session/ab56d67e604f19ddd29be742163c220c/execute/sync - {"script":"return (function (key) {\r\n            return window.localStorage.getItem(key);\r\n        }).apply(null, arguments)","args":["myLocalStorage"]}
-RESULT: {"script":"return (function (key) {\r\n            return window.localStorage.getItem(key);\r\n        }).apply(null, arguments)","args":["myLocalStorage"]}
-COMMAND: DELETE /session/ab56d67e604f19ddd29be742163c220c - {}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/url - {"url":"https://www.wolfram.com/mathematica/"}
+RESULT: {"url":"https://www.wolfram.com/mathematica/"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"#_nav-search"}
+RESULT: {"using":"css selector","value":"#_nav-search"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_83/element - {"using":"css selector","value":"._nav-l1"}
+RESULT: {"using":"css selector","value":"._nav-l1"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_84/element - {"using":"css selector","value":"._icon-r1-c3.hide__600"}
+RESULT: {"using":"css selector","value":"._icon-r1-c3.hide__600"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_85/click - {}
+RESULT: {}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"#_nav-search"}
+RESULT: {"using":"css selector","value":"#_nav-search"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_83/element - {"using":"css selector","value":".no-bfc"}
+RESULT: {"using":"css selector","value":".no-bfc"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_87/element - {"using":"css selector","value":"#_search-input"}
+RESULT: {"using":"css selector","value":"#_search-input"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_86/clear - {}
+RESULT: {}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_86/value - {"text":"orthogonal"}
+RESULT: {"text":"orthogonal"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/0C45032B0E4774020642DC6436D636ED_element_86/value - {"text":""}
+RESULT: {"text":""}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"#main"}
+RESULT: {"using":"css selector","value":"#main"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/FAE64291D04B555431E3D39888C69B95_element_112/element - {"using":"css selector","value":".column_box"}
+RESULT: {"using":"css selector","value":".column_box"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/FAE64291D04B555431E3D39888C69B95_element_113/element - {"using":"css selector","value":".search_result_title"}
+RESULT: {"using":"css selector","value":".search_result_title"}
+COMMAND: GET /session/eda0070c2137515158dc2016cca82c6e/element/FAE64291D04B555431E3D39888C69B95_element_114/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.119_0_6045_124.windows.Test_suite_-_Homework_2" name="Fifth test Verifying that Logo page is a clickable element" time="1.127">
+      <system-out><![CDATA[
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/url - {"url":"https://www.wolfram.com/mathematica/"}
+RESULT: {"url":"https://www.wolfram.com/mathematica/"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element - {"using":"css selector","value":"#_header-b"}
+RESULT: {"using":"css selector","value":"#_header-b"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/element/A99254E972811928823A939ED972CC52_element_128/element - {"using":"css selector","value":".cf.display-b"}
+RESULT: {"using":"css selector","value":".cf.display-b"}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"A99254E972811928823A939ED972CC52_element_129","ELEMENT":"A99254E972811928823A939ED972CC52_element_129"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7807 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"A99254E972811928823A939ED972CC52_element_129","ELEMENT":"A99254E972811928823A939ED972CC52_element_129"}]}
+COMMAND: POST /session/eda0070c2137515158dc2016cca82c6e/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5151 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"A99254E972811928823A939ED972CC52_element_129","ELEMENT":"A99254E972811928823A939ED972CC52_element_129"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5151 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"A99254E972811928823A939ED972CC52_element_129","ELEMENT":"A99254E972811928823A939ED972CC52_element_129"}]}
+COMMAND: DELETE /session/eda0070c2137515158dc2016cca82c6e - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
